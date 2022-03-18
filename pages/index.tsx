@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { client } from "../libs/client";
+import { Input } from "@chakra-ui/react"
 
 export default function Home({ blog }) {
   return (
@@ -13,6 +14,20 @@ export default function Home({ blog }) {
           </li>
         ))}
       </ul>
+      <Input
+      w="30%"
+      m="5"
+      type="text"
+      placeholder="Input Field"
+      color="blue.800"
+      bg="blue.50"
+      rounded="2xl"
+      border="0"
+      _focus={{
+        bg: "blue.200",
+        outline: "none",
+      }}
+    />
     </div>
   );
 }
