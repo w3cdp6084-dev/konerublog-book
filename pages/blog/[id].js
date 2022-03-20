@@ -1,5 +1,5 @@
 import { client } from "../../libs/client";
-import styles from '../../styles/Home.module.scss';
+import styles from '../../src/styles/Home.module.scss';
 
 export default function BlogId({ blog }) {
   return (
