@@ -1,6 +1,6 @@
 import styles from "../../styles/Header.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faSearch} from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 export default function Heater() {
   return (
@@ -16,7 +16,7 @@ export default function Heater() {
             <li><a href="/">ABOUT</a></li>
             <li><a href="/">CONTACT</a></li>
           </ul>
-          <ul className="navBtn">
+          <ul className={styles.navBtn}>
             <li>
             <FontAwesomeIcon
               icon={faSearch}
