@@ -3,5 +3,18 @@
     .mainIner{
         max-width: 1920px;
         margin: 0 auto;
+        .lists{
+            display: flex;
+            .list{
+                max-width: 420px;
+                background: #E3E6EC;
+                box-shadow: 28.6154px 28.6154px 31.7949px #D1D9E6, -28.6154px -28.6154px 31.7949px rgba(255, 255, 255, 0.5);
+                border-radius: 10px;
+                margin: 0 auto;
+            }
+            li + li{
+                margin-left: 80px;
+            }
+        }
     }
 }

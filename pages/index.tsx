@@ -5,9 +5,9 @@ import styles from '../src/styles/common.module.scss';
 export default function Home({ blog }) {
   return (
     <div className={styles.mainIner}>
-        <ul>
+        <ul className={styles.lists}>
           {blog.map((blog) => (
-            <li key={blog.id}>
+            <li key={blog.id} className={styles.list}>
               <Link href={`/blog/${blog.id}`}>
                 <a>{blog.title}</a>
               </Link>
