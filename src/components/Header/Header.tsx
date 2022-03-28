@@ -1,6 +1,7 @@
 import styles from "../../styles/Header.module.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import Link from 'next/link';
 
 export default function Heater() {
   return (
@@ -11,10 +12,10 @@ export default function Heater() {
         </div>
         <nav className={styles.navWrap}>
           <ul className={styles.lists}>
-            <li><a href="/">HOME</a></li>
-            <li><a href="/">BLOG</a></li>
-            <li><a href="/">ABOUT</a></li>
-            <li><a href="/">CONTACT</a></li>
+            <li><Link href="/"><a>HOME</a></Link></li>
+            <li><Link href="/list"><a>BLOG</a></Link></li>
+            <li><Link href="/about"><a>ABOUT</a></Link></li>
+            <li><Link href="/contact"><a>CONTACT</a></Link></li>
           </ul>
           <ul className={styles.navBtn}>
             <li>
@@ -30,6 +31,7 @@ export default function Heater() {
             />
             </li>
           </ul>
+          <p className="text-black dark:text-white">text</p>
         </nav>
       </header>
     </div>
