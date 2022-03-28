@@ -5,10 +5,12 @@ import styles from '../src/styles/about.module.scss';
       <main className={styles.mainWrap}>
         <div className={styles.contentWrap}>
           <div className={styles.logoWrap}>
-            <img src="/image/logo.svg" alt="about logo" />
+            <div className={styles.logo}>
+              <img src="/image/logo.svg" alt="about logo" />
+            </div>
           </div>
           <div>
-            <h2>KONEKONE</h2>
+            <h2 className="font-bold">KONEKONE</h2>
             <h3>Yusuke Mori <br />
             Designer/Developer</h3>
           </div>
