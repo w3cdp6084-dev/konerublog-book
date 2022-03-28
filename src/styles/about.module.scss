@@ -21,10 +21,20 @@
                 padding: 16px;
             }
         }
-
     }
 }
 .contentWrap{
     display: grid;
     place-items: center;
+}
+
+.btnWrap{
+    background: #E3E6EC;
+    box-shadow: 28.6154px 28.6154px 31.7949px #D1D9E6, -28.6154px -28.6154px 31.7949px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-bottom: 48px;
+    padding: 16px 90px;
+    p{
+        color: #4a4a4a;
+    }
 }
