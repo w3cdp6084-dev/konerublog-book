@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { client } from "../libs/client";
-import Date from "../src/components/utils/Date";
+import Date from "../src/components/utils/Dateparse";
 import styles from '../src/styles/common.module.scss';
 import { Pagination } from '../src/components/utils/Pagination';
 
