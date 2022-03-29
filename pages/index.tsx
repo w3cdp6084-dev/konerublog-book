@@ -10,14 +10,16 @@ export default function Home({ blog }) {
         <ul className={styles.lists}>
           {blog.map((blog) => (
             <li key={blog.id} className={styles.list}>
-              <Link href={`/blog/${blog.id}`}>
-                <a>{blog.title}</a>
-              </Link>
+              <div>
+                <p>{blog.category && `${blog.category.name}`}</p>
+              </div>
               <div>
                 <Date dateString={blog.publishedAt} />
               </div>
-              <div>
-                <p>{blog.category && `${blog.category.name}`}</p>
+              <Link href={`/blog/${blog.id}`}>
+                <a>{blog.title}</a>
+              </Link>
+              <div dangerouslySetInnerHTML={{ __html: `${blog.body}`,}}>
               </div>
             </li>
           ))}
