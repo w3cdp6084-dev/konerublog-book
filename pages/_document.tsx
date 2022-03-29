@@ -1,13 +1,17 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 
-export default function Document() {
+const MyDocument = () => {
   return (
-    <Html lang='ja' className="dark">
-      <Head />
-      <body>
+    <Html lang="ja-JP" className="dark">
+      <Head>
+        <meta name="application-name" content="MyApp" />
+      </Head>
+      <body className="dark:bg-gray-800">
         <Main />
         <NextScript />
       </body>
     </Html>
   )
 }
+
+export default MyDocument
