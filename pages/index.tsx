@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { client } from "../libs/client";
-import Date from "../src/components/utils/Dateparse";
+import Date from "../src/components/utils/Dates";
 import styles from '../src/styles/common.module.scss';
 import { Pagination } from '../src/components/utils/Pagination';
+
 
 export default function Home({ blog,totalCount }) {
   return (
@@ -27,11 +28,17 @@ export default function Home({ blog,totalCount }) {
   );
 }
 
+
+
+
+
+
+
 export const getStaticProps = async () => {
+  const data = await client.get({ endpoint: "blog" });
   const key = {
     headers: {'X-MICROCMS-API-KEY': process.env.API_KEY},
   };
-  const data = await client.get({ endpoint: "blog" });
   const datas = await fetch('https://konerublog-book.microcms.io/api/v1/blog?offset=0&limit=5', key)
   .then(res => res.json())
   .catch(() => null);
