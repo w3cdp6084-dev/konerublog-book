@@ -9,7 +9,11 @@ export default function Heater() {
     <div className={styles.headerWrap}>
       <header className={styles.header}>
         <div className={styles.logoWrap}>
-          <img src="/image/logo.svg" alt="logo" />
+          <Link href="/">
+            <a>
+              <img src="/image/logo.svg" alt="logo" />
+            </a>
+          </Link>
         </div>
         <nav className={styles.navWrap}>
           <ul className={styles.lists}>

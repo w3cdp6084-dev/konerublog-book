@@ -43,7 +43,7 @@ export default function Footer() {
             </a>
           </li>
         </ul>
-        <p className="text-center mt-10">koneru blog.</p>
+        <p className="text-center mt-10 mb-20">koneru blog.</p>
       </footer>
     </div>
   );
