@@ -13,6 +13,13 @@ export default function Home({ blog,totalCount }) {
             <Link href={`/blog/${blog.id}`}>
               <li key={blog.id} className={styles.list}>
                 <div>
+                <img
+                  alt="thumbnail"
+                  role="presentation"
+                  src={blog.ogpimg && `${blog.ogpimg.url}`}
+                />
+                </div>
+                <div>
                   <p>{blog.category && `${blog.category.name}`}</p>
                 </div>
                 <div>
@@ -27,12 +34,6 @@ export default function Home({ blog,totalCount }) {
     </div>
   );
 }
-
-
-
-
-
-
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "blog" });

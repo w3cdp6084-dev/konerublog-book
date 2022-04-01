@@ -18,3 +18,24 @@
         }
     }
 }
+.pageList{
+    background: #E3E6EC;
+    box-shadow: -12px -16px 32px rgba(255, 255, 255, 0.55), 12px 16px 32px #E3E6EC;
+    border-radius: 10px;
+    margin:200px auto;
+    width:400px;
+    
+    ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            padding: 16px;
+            // a:before{
+            //     display: block;
+            //     font-family: "Font Awesome 5 Solid";
+            //     content: "\f007";
+            // }
+        }
+    }
+}
