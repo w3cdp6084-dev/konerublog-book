@@ -28,6 +28,7 @@
     "react-moment": "^1.1.1",
     "react-paginate": "^8.1.2",
     "ress": "^5.0.2",
+    "swiper": "^8.1.0",
     "swr": "^1.2.2"
   },
   "devDependencies": {
