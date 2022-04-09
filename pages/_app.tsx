@@ -1,8 +1,8 @@
 import '../src/styles/globals.css';
 import "tailwindcss/tailwind.css";
-import 'swiper/css/bundle'
+import 'swiper/css/bundle';
 import { Layout } from '../src/components/Layout';
-import { ThemeProvider } from 'next-themes'
+import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
   return(

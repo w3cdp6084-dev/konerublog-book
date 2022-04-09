@@ -37,3 +37,33 @@ a {
 .toggle-label {
   @apply block h-6 align-middle overflow-hidden text-gray-100 bg-gray-100 rounded-full cursor-pointer dark:text-gray-400 dark:bg-gray-400 dark:border-gray-400 border-gray-100 border-2;
 }
+
+/* スワイプ */
+.mySwiper > .swiper-wrapper > .swiper-slide{
+  flex-shrink: 0;
+}
+ul > .swiper {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #E3E6EC;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
