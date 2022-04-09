@@ -8,7 +8,10 @@ export default function Home({ blog }) {
   return (
     <div className={styles.mainIner}>
         <ul className={styles.lists}>
-          <Swiper className="mySwiper">
+          <Swiper slidesPerView={4}
+                  spaceBetween={80}
+                  centeredSlides={false}
+                  className="mySwiper">
             {blog.map((blog) => (
               <Link href={`/blog/${blog.id}`}>
                 <SwiperSlide>
