@@ -2,12 +2,18 @@ import Link from "next/link";
 import { client } from "../libs/client";
 import Date from "../src/components/utils/Dates";
 import styles from '../src/styles/common.module.scss';
+
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+
 export default function Home({ blog }) {
   return (
     <div className={styles.mainIner}>
         <ul className={styles.lists}>
+        <Swiper className="mySwiper">
           {blog.map((blog) => (
             <Link href={`/blog/${blog.id}`}>
+              <SwiperSlide>
               <li key={blog.id} className={styles.list}>
                 <div>
                   <img
@@ -24,8 +30,10 @@ export default function Home({ blog }) {
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: `${blog.body}`,}} className={styles.body}></div>
               </li>
+              </SwiperSlide>
             </Link>
           ))}
+        </Swiper>
         </ul>
     </div>
   );
