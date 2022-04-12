@@ -1,19 +1,33 @@
 import Link from "next/link";
 import { client } from "../libs/client";
-
+import styles from '../src/styles/list.module.scss';
+import Date from "../src/components/utils/Dates";
   export default function List({blog}) {
     return (
-      <div>
-      <ul>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+      <div className={styles.mainIner}>
+        <ul className={styles.lists}>
+            {blog.map((blog) => (
+              <Link href={`/blog/${blog.id}`}>
+                  <li key={blog.id} className={styles.list}>
+                    <div>
+                      <img
+                        alt="thumbnail"
+                        role="presentation"
+                        src={blog.ogpimg && `${blog.ogpimg.url}`}
+                      />
+                    </div>
+                    <div className={styles.categoryWrap}>
+                      <p className="text-sm text-center">{blog.category && `${blog.category.name}`}</p>
+                    </div>
+                    <div className="date">
+                      <Date dateString={blog.publishedAt} />
+                    </div>
+                    <div dangerouslySetInnerHTML={{ __html: `${blog.body}`,}} className={styles.body}></div>
+                  </li>
+              </Link>
+            ))}
+        </ul>
+      </div>
     );
   }
 
@@ -22,7 +36,7 @@ export const getStaticProps = async () => {
   const key = {
     headers: {'X-MICROCMS-API-KEY': process.env.API_KEY},
   };
-  const datas = await fetch('https://konerublog-book.microcms.io/api/v1/blog?offset=0&limit=5', key)
+  const datas = await fetch('https://konerublog-book.microcms.io/api/v1/blog?&limit=20', key)
   .then(res => res.json())
   .catch(() => null);
   return {
