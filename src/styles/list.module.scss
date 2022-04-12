@@ -1,10 +1,12 @@
 
     .mainIner{
-        max-width: 1920px;
+        max-width: 1280px;
         margin: 0 auto;
         .lists{
             display: flex;
+            justify-content: center;
             margin: 180px 0 160px 0;
+            flex-wrap: wrap;
             .list{
                 width: 420px;
                 background: #E3E6EC;
@@ -48,6 +50,9 @@
                 }
             }
             li + li{
+                margin-left: 80px;
+            }
+            li:first-child{
                 margin-left: 80px;
             }
         }
