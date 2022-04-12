@@ -2,7 +2,8 @@ import Link from "next/link";
 import { client } from "../libs/client";
 import styles from '../src/styles/list.module.scss';
 import Date from "../src/components/utils/Dates";
-  export default function List({blog}) {
+import { Pagination } from "../src/components/utils/Pagination";
+  export default function List({blog,totalCount}) {
     return (
       <div className={styles.mainIner}>
         <ul className={styles.lists}>
@@ -27,6 +28,7 @@ import Date from "../src/components/utils/Dates";
               </Link>
             ))}
         </ul>
+        <Pagination totalCount={totalCount} />
       </div>
     );
   }
