@@ -2,9 +2,15 @@ import Link from "next/link";
 import { client } from "../libs/client";
 import Date from "../src/components/utils/Dates";
 import styles from '../src/styles/common.module.scss';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
 export default function Home({ blog }) {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
   return (
     <div className={styles.mainIner}>
         <ul className={styles.lists}>
