@@ -27,7 +27,9 @@
     "react-icons": "^4.3.1",
     "react-moment": "^1.1.1",
     "react-paginate": "^8.1.2",
+    "react-slick": "^0.29.0",
     "ress": "^5.0.2",
+    "slick-carousel": "^1.8.1",
     "swiper": "^8.1.0",
     "swr": "^1.2.2"
   },

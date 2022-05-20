@@ -2,19 +2,14 @@ import Link from "next/link";
 import { client } from "../libs/client";
 import Date from "../src/components/utils/Dates";
 import styles from '../src/styles/common.module.scss';
-import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css/bundle';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 export default function Home({ blog }) {
   return (
     <div className={styles.mainIner}>
         <ul className={styles.lists}>
-          <Swiper slidesPerView={4}
-                  spaceBetween={80}
-                  centeredSlides={false}
-                  className="mySwiper">
             {blog.map((blog) => (
               <Link href={`/blog/${blog.id}`}>
-                <SwiperSlide>
                   <li key={blog.id} className={styles.list}>
                     <div>
                       <img
@@ -31,10 +26,8 @@ export default function Home({ blog }) {
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: `${blog.body}`,}} className={styles.body}></div>
                   </li>
-                </SwiperSlide>
               </Link>
             ))}
-          </Swiper>
         </ul>
     </div>
   );
